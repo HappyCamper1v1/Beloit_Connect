@@ -9,9 +9,20 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+    <body className={inter.className}>
+    <div className='sidenav'>
+        <a href="/" >Home</a>
+        <a href="/about" >About</a>
+        <a href="/events" >Events</a>
+        <a href="/communities" >communities</a>
+        <a href="/message" >Message</a>
+    </div>
+    <main>{children}</main>
+    </body>
+  </html>
+)
 }
