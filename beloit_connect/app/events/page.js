@@ -1,8 +1,7 @@
-export default function Page() {
+export default function event() {
    return (
     <main>
         <h1>Hello, Dashboard Page!</h1>
-        <a href="/">Home</a>
     </main>
     )
   }
