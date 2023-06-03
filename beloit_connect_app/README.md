@@ -1,34 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## What is the Goal of Beloit Connect?
 
-## Getting Started
+## Promote Networking and Mentorship:
 
-First, run the development server:
+    This application seeks to offer a space for interaction between students and alumni, thus serving as a platform for mentorship, guidance, and insights into various professions and career prospects. Through this, students can benefit from real-world experience, which can help them better understand their career options and pathways.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Ease of Connection:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Beloit Connect is designed to make it easy for students and alumni to connect. It provides a comprehensive portal where students can locate alumni, peruse their profiles, and initiate conversations. On the other hand, alumni can effortlessly link up with students who share similar interests, thereby facilitating meaningful connections.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Cultivate Community:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    One of the major aims of the application is to cultivate a robust sense of community among students and alumni. By uniting individuals from diverse backgrounds and experiences, the app endeavors to create a supportive environment where users can collaborate, exchange knowledge, and develop lasting relationships.
 
-## Learn More
+## Bridge the Communication Divide:
 
-To learn more about Next.js, take a look at the following resources:
+    Recognizing that creating enduring bonds between students and alumni can be challenging due to communication barriers, the application seeks to bridge this gap. It does this by fostering engagement and communication between students and alumni, thereby promoting a healthy interaction environment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Empower through Knowledge Sharing:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    The platform is designed not just for connection but also for the exchange of ideas and knowledge. Through shared experiences and mentorship, students can learn from the past experiences of the alumni, while alumni get to contribute to shaping the next generation of professionals.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I initially created the program in Ruby, but I ultimately chose to use a different technology.
