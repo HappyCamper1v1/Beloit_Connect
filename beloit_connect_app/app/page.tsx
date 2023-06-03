@@ -3,8 +3,8 @@ import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <main>
-      <h1>This is the main page</h1>
+    <main className={styles.main}>
+     <h1>This is the main page</h1>
     </main>
   )
 }
