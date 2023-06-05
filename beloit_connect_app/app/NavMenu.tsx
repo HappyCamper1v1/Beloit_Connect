@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styles from './NavMenu.module.css'
+import { SignInButton, SignOutButton } from '@/components/buttons'
 
 export default function NavMenu() {
     return (
@@ -9,6 +10,8 @@ export default function NavMenu() {
         <Link href="/events" >Events</Link>
         <Link href="/communities" >Communities</Link>
         <Link href="/message" >Message</Link>
+        <SignOutButton/>
+        <SignInButton/>
     </div>
     )
 }
