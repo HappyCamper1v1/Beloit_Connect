@@ -15,7 +15,7 @@ export function SignInButton() {
 
   if (status === 'authenticated') {
     return (
-      <Link href={`/`}>
+      <Link href={`/dashborad`}>
         <Image
           src={session.user?.image ?? '/mememan.webp'}
           width={32}

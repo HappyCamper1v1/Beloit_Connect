@@ -1,17 +1,21 @@
 import Link from 'next/link'
-import styles from './NavMenu.module.css'
 import { SignInButton, SignOutButton } from '@/components/buttons'
 
 export default function NavMenu() {
     return (
-    <div className={styles.sidenav}>
-        <Link href="/" >Home</Link>
-        <Link href="/about" >About</Link>
-        <Link href="/events" >Events</Link>
-        <Link href="/communities" >Communities</Link>
-        <Link href="/message" >Message</Link>
-        <SignOutButton/>
-        <SignInButton/>
-    </div>
+      <div>
+        <div>
+          <ul>
+            <li><Link className='mynavlink' href="/" >Home</Link></li>
+            <li><Link className='mynavlink' href="/about" >About</Link></li>
+            <li><Link className='mynavlink' href="/events" >Events</Link></li>
+            <li><Link className='mynavlink' href="/communities" >Communities</Link></li>
+            <li><Link className='mynavlink' href="/message" >Message</Link></li>
+            <li><Link className='mynavlink' href="/users" >Users</Link></li>
+            <li><SignOutButton/></li>
+            <li><SignInButton/></li>
+          </ul>
+        </div>
+      </div>
     )
 }
