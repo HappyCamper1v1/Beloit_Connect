@@ -31,11 +31,17 @@ CREATE TABLE "Session" (
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
     "name" TEXT,
+    "firstname" TEXT,
+    "lastname" TEXT,
+    "major" TEXT,
+    "industry" TEXT,
+    "status" TEXT,
     "bio" TEXT,
     "age" INTEGER,
     "email" TEXT,
     "emailVerified" TIMESTAMP(3),
     "image" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );

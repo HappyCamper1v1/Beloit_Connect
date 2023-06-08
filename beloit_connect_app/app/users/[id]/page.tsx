@@ -14,12 +14,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function UserProfile({ params }: Props) {
   const user = await prisma.user.findUnique({ where: { id: params.id } });
-  const { name, bio, image, id } = user ?? {};
+  const { name, firstname, bio, image, id } = user ?? {};
 
   return (
     <div>
       <h1>{name}</h1>
-
+      <p>{id}</p>
       <img
         width={300}
         src={image ?? '/mememan.webp'}
@@ -28,6 +28,7 @@ export default async function UserProfile({ params }: Props) {
 
       <h3>Bio</h3>
       <p>{bio}</p>
+      {firstname}
 
     </div>
   );

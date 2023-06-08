@@ -6,9 +6,11 @@ interface Props {
   name: string | null;
   age: number | null;
   image: string | null;
+  status: string | null;
+  major: string | null;
 }
 
-export default function UserCard({ id, name, age, image }: Props) {
+export default function UserCard({ id, name, major, age, status, image}: Props) {
   return (
     <div >
         <Image
@@ -21,6 +23,9 @@ export default function UserCard({ id, name, age, image }: Props) {
         <h3>
           <Link href={`/users/${id}`}>{name}</Link>
         </h3>
+        <p></p>
+        <p>Status: {status}</p>
+        <p>Major: {major}</p>
         <p>Age: {age}</p>
       </div>
     </div>
