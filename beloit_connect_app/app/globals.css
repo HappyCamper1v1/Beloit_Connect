@@ -1,0 +1,102 @@
+html, body, p {
+    margin: 0;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #003865;
+}
+
+.app-name {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+.sign-btn-right {
+    display: flex;
+    margin-right: 10px;
+    gap: 10px;
+}
+
+/* Add these styles */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 50px); /* Subtracting the header height */
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+/* Add this to your CSS file */
+
+.form-field label {
+    color: #003865;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+form {
+    width: 80%;
+    margin: auto;
+    max-width: 500px;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 50px;
+    background-color: #002D52;
+    min-height: calc(100vh - 50px); /* Subtracting the header height */
+    width: 180px; /* Adjust the width as per your need */
+    color: white;
+    padding: 15px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    padding: 10px 0;
+}
+
+.mynavlink {
+     font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.mynavlink:hover {
+    color: gold;
+}
+
+
+/* Styles for layout */
+.layout-container {
+    display: flex;
+}
+
+.layout-content {
+    margin-top: 50px; /* header height */
+    margin-left: 220px; /* navbar width */
+    flex-grow: 1;
+    padding: 15px;
+}
+
+.card-img {
+    border-radius: 50%;
+}

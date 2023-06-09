@@ -13,20 +13,21 @@ interface Props {
 export default function UserCard({ id, name, major, age, status, image}: Props) {
   return (
     <div >
-        <Image
+        <Link href={`/users/${id}`}>
+        <Image className='card-img'
           src={image ?? '/mememan.webp'}
-          width={32}
-          height={32}
+          width={64}
+          height={64}
           alt={`${name}`}
         />
+        </Link>
       <div>
         <h3>
-          <Link href={`/users/${id}`}>{name}</Link>
+         {/* {name}</Link> */}
         </h3>
         <p></p>
         <p>Status: {status}</p>
         <p>Major: {major}</p>
-        <p>Age: {age}</p>
       </div>
     </div>
   );
