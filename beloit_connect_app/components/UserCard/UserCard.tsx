@@ -10,7 +10,7 @@ interface Props {
   major: string | null;
 }
 
-export default function UserCard({ id, name, major, age, status, image}: Props) {
+export default function UserCard({ id, name, major, status, image}: Props) {
   return (
     <div >
         <Link href={`/users/${id}`}>
@@ -23,7 +23,6 @@ export default function UserCard({ id, name, major, age, status, image}: Props) 
         </Link>
       <div>
         <h3>
-         {/* {name}</Link> */}
         </h3>
         <p></p>
         <p>Status: {status}</p>

@@ -11,6 +11,7 @@ export default function NavMenu() {
         <li><Link className='mynavlink' href="/communities" >Communities</Link></li>
         <li><Link className='mynavlink' href="/message" >Message</Link></li>
         <li><Link className='mynavlink' href="/users" >Users</Link></li>
+        <li><Link className='mynavlink' href="/dashboard" >Dashboard</Link></li>
       </ul>
     </div>
   )
