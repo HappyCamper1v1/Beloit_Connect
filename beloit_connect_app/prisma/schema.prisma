@@ -42,21 +42,47 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  firstname     String?
-  lastname      String?
-  major         String?
-  industry      String?
-  status        String?
-  bio           String?   @db.Text
-  age           Int?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  createdAt     DateTime  @default(now())
-  accounts      Account[]
-  sessions      Session[]
+  id               String    @id @default(cuid())
+  name             String?
+  firstname        String?
+  lastname         String?
+  major            String?
+  industry         String?
+  status           String?
+  bio              String?   @db.Text
+  age              Int?
+  email            String?   @unique
+  emailVerified    DateTime?
+  image            String?
+  createdAt        DateTime  @default(now())
+  accounts         Account[]
+  messagesSent     Message[] @relation("messageSender")
+  messagesReceived Message[] @relation("messageReceiver")
+  following        Follow[]  @relation("follower")
+  followers        Follow[]  @relation("following")
+  sessions         Session[]
+}
+
+model Follow {
+  followerId  String
+  followingId String
+  createdAt   DateTime @default(now())
+  follower    User     @relation("follower", fields: [followerId], references: [id])
+  following   User     @relation("following", fields: [followingId], references: [id])
+
+  @@id([followerId, followingId])
+}
+
+model Message {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  content    String   @db.Text
+  senderId   String
+  receiverId String
+  sender     User     @relation("messageSender", fields: [senderId], references: [id])
+  receiver   User     @relation("messageReceiver", fields: [receiverId], references: [id])
+
+  @@index([senderId, receiverId])
 }
 
 model VerificationToken {
