@@ -51,6 +51,8 @@ model User {
   status           String?
   bio              String?   @db.Text
   age              Int?
+  year             Int?
+  profession       String?
   email            String?   @unique
   emailVerified    DateTime?
   image            String?
@@ -60,6 +62,7 @@ model User {
   messagesReceived Message[] @relation("messageReceiver")
   following        Follow[]  @relation("follower")
   followers        Follow[]  @relation("following")
+  posts            Post[]
   sessions         Session[]
 }
 
@@ -83,6 +86,18 @@ model Message {
   receiver   User     @relation("messageReceiver", fields: [receiverId], references: [id])
 
   @@index([senderId, receiverId])
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  content   String   @db.Text
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+
+  @@index([authorId])
 }
 
 model VerificationToken {

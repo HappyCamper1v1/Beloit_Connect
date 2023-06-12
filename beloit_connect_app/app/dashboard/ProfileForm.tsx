@@ -15,6 +15,8 @@ export function ProfileForm({ user }: any) {
       major:formData.get('major'),
       industry:formData.get('industry'),
       status:formData.get('status'),
+      year: parseInt(formData.get('year') as string),
+      profession: formData.get('profession'),
       bio: formData.get('bio'),
       age: formData.get('age'),
       image: formData.get('image'),
@@ -148,6 +150,12 @@ export function ProfileForm({ user }: any) {
             rows={10}
             defaultValue={user?.bio ?? ''}
           ></textarea>
+
+          <label htmlFor="profession">profession</label>
+          <input type="text" name="profession" defaultValue={user?.profession ?? ''} />
+
+          <label htmlFor="year">Class Year</label>
+          <input type="number" name="year" defaultValue={user?.year ?? 0} />
 
           <label htmlFor="age">Age</label>
           <input type="text" name="age" defaultValue={user?.age ?? 0} />

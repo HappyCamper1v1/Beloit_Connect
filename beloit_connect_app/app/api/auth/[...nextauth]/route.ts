@@ -15,14 +15,8 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async signIn({ user}) {
-      // Check if the email domain is 'beloit.edu'
-      if (user.email && user.email.endsWith("@beloit.edu")) {
-        return true;
-      } else {
-        // If the email is not from 'beloit.edu', deny access
-        return false;
-      }
+    async redirect({ url, baseUrl }) {
+      return 'http://localhost:3000/dashboard'
     },
   },
 }

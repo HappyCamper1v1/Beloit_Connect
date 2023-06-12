@@ -4,6 +4,7 @@ import Image from 'next/image';
 interface Props {
   id: string;
   name: string | null;
+  year:number | null,
   age: number | null;
   image: string | null;
   status: string | null;
@@ -18,15 +19,13 @@ export default function UserCard({ id, name, major, status, image}: Props) {
           src={image ?? '/mememan.webp'}
           width={64}
           height={64}
-          alt={`${name}`}
-        />
+          alt={`${name}`}/>
         </Link>
       <div>
-        <h3>
-        </h3>
         <p></p>
         <p>Status: {status}</p>
         <p>Major: {major}</p>
+        
       </div>
     </div>
   );
