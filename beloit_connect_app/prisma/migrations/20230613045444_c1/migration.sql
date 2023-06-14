@@ -37,7 +37,6 @@ CREATE TABLE "User" (
     "industry" TEXT,
     "status" TEXT,
     "bio" TEXT,
-    "age" INTEGER,
     "year" INTEGER,
     "profession" TEXT,
     "email" TEXT,
@@ -74,6 +73,8 @@ CREATE TABLE "Post" (
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "title" TEXT NOT NULL,
+    "industry" TEXT NOT NULL,
+    "image" TEXT,
     "content" TEXT NOT NULL,
     "authorId" TEXT NOT NULL,
 

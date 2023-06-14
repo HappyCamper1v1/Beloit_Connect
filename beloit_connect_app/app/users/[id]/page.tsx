@@ -1,5 +1,5 @@
-import { prisma } from '@/lib/prisma';
-import { Metadata } from 'next';
+import { prisma } from "@/lib/prisma";
+import { Metadata } from "next";
 
 interface Props {
   params: {
@@ -19,9 +19,10 @@ export default async function UserProfile({ params }: Props) {
   return (
     <div>
       <h1>{name}</h1>
-      <img className='card-img'
+      <img
+        className="card-img"
         width={150}
-        src={image ?? '/mememan.webp'}
+        src={image ?? "/mememan.webp"}
         alt={`${name}'s profile`}
       />
       <h2>Class Year</h2>

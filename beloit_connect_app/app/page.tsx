@@ -1,15 +1,18 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import { prisma} from "@/lib/prisma";
-import AuthCheck from '@/components/AuthCheck';
+import PostCard from "@/components/postCard/postcard";
+import CreatePostForm from "@/components/postCard/createpostform";
 
-export default function Home() {
+import { prisma } from "@/lib/prisma";
+
+export default async function Home() {
+  const posts = await prisma.post.findMany();
+  console.log(`This is the home page: ${posts}`);
+
   return (
-    <AuthCheck>
-      <main className={styles.main}>
-        <h1>This is the main page</h1>
-        <h2>Welcome</h2> {/* Use the fetched data */}
-      </main>
-    </AuthCheck>
-  )
+    <div className="home-container">
+      <CreatePostForm />
+      {posts.map((post) => {
+        return <PostCard key={post.id} {...post} />;
+      })}
+    </div>
+  );
 }

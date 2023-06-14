@@ -51,7 +51,6 @@ html, body, p {
 
 form {
     width: 80%;
-    margin: auto;
     max-width: 500px;
 }
 
@@ -178,4 +177,14 @@ form {
     margin-bottom: 1rem;
     margin: auto;
     padding: 10px;
+}
+
+.post-box {
+    display: block;
+    margin: 20px auto;
+}
+
+.home-container {
+    width: 50%;
+    margin: 0 auto;
 }
