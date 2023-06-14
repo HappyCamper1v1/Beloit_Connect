@@ -21,8 +21,9 @@ export default function PostCard({
       <p>title: {title}</p>
       <p>industry: {industry}</p>
       <p>content: {content}</p>
-      <p>Users: {authorId}</p>
-      <Link href={`/users/${authorId}`}></Link>
+      <Link href={`/users/${authorId}`}>
+        <p>Users: {authorId}</p>
+      </Link>
     </div>
   );
 }
